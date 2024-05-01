@@ -1,13 +1,7 @@
-# import requests
+import requests
 
-# # URL of your Flask API endpoint
-# url = "http://127.0.0.1:5000/admin/users"
+url = "http://127.0.0.1:5000/admins/create"
+data = {"username": "admin1", "email": "admin1@example.com", "password": "12345"}
+response = requests.post(url, json=data)
 
-# # Data to be sent in the request body (JSON format)
-# data = {"username": "new_admin", "email": "new_admin@example.com"}
-
-# # Send POST request with data
-# response = requests.post(url, json=data)
-
-# # Print response
-# print(response.json())
+print(response.status_code)
